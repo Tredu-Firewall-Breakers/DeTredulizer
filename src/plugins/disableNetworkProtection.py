@@ -34,7 +34,8 @@ def run():
         with winreg.OpenKey(reg, intune_key["path"], 0, winreg.KEY_SET_VALUE) as key:
             winreg.SetValueEx(key, intune_key["key"], 0, winreg.REG_DWORD, 0)
 
-        colors.colored("Network Protection disabled successfully. If you are still restricted, try restarting your computer or executing command again.", colors.OKBLUE)
+        #colors.colored("Network Protection disabled successfully. If you are still restricted, try restarting your computer or executing command again.", colors.OKBLUE)
+        print("Network Protection disabled successfully. If you are still restricted, try restarting your computer or executing command again.")
     except PermissionError:
         colors.fail("Permission denied. Please run this program as an administrator.")
     except Exception as e:

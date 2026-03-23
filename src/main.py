@@ -1,9 +1,8 @@
-import sys
-
 from EasyMenu3 import easymenu, print_table, colors
 from pathlib import Path
 
 import os
+import sys
 import winreg
 import importlib.util
 
